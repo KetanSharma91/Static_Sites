@@ -1,0 +1,478 @@
+:root {
+    --text-color: #000000;
+    --text-secondary-color: #2E2E2E;
+    --back-color: #FFFFFF;
+    --back-secondary-color: #F5F5F5;
+    --box-shadow: 0px 3px 16px 0px #00CFFD;
+    --btn-color: #32FF7E;
+    --btn-secondary-color: #0056D2;
+    --border-color: #FF6F00;
+    --border-secondary-color: #00CFFD;
+}
+
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 9999;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: all 0.4s ease-out;
+}
+
+/* ----------------------------------------navbar------------------------------------------------------------ */
+
+.header {
+    position: absolute;
+    box-shadow: none;
+    background: none;
+    /* overflow-x: hidden; */
+}
+
+.logo a {
+    margin: 0px;
+}
+
+.logo h1 a {
+    font-size: inherit;
+    font-weight: 600;
+}
+
+nav {
+    z-index: 100;
+    float: right;
+    margin: 0;
+    padding: 10px 15px;
+}
+
+nav ul li {
+    color: var(--text-color);
+    opacity: 1;
+    letter-spacing: 0.7px;
+}
+
+.nav-link:hover,
+.linkset {
+    color: var(--border-secondary-color) !important;
+}
+
+nav a {
+    margin: 5px 5px 0px 5px;
+}
+
+section {
+    text-align: center;
+    padding-top: 75px;
+    transform: scale(0.9);
+    animation: none;
+    transition: all 0.8s ease-in-out;
+}
+
+.dn {
+    opacity: 0;
+    display: none;
+    transform: scale(0);
+}
+
+.active {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
+/* -------------------------------------hero------------------------------------------------------------- */
+
+.hero {
+    background-image: url('../images/bg.jpg');
+}
+
+.hero h1,
+.hero p,
+.hero span {
+    color: var(--text-color);
+}
+
+.hero span {
+    letter-spacing: 2px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 0 15px;
+}
+
+.hero h1 {
+    font-weight: 600;
+    margin-bottom: 0px;
+    font-size: 3.9rem;
+    padding: 0 15px;
+}
+
+.hero p {
+    color: var(--border-secondary-color);
+    font-style: italic;
+    margin-top: -12px;
+}
+
+/* -----------------------------------------------------------about------------------------------------------------- */
+
+.about .container,
+.about h2 {
+    text-align: left;
+}
+
+.about .container p {
+    font-size: 1.3rem;
+}
+
+.about .container h4 {
+    margin: 10px 0;
+}
+
+.about .container h4 span {
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 75%;
+}
+
+.about .btn {
+    background-color: var(--btn-secondary-color);
+    border-color: var(--btn-secondary-color);
+    color: var(--back-color);
+    margin: 20px 0;
+}
+
+.about .btn:hover {
+    color: var(--btn-secondary-color);
+    background-color: transparent;
+}
+
+.about .container .row:last-child {
+    margin-top: 35px;
+}
+
+.about .container h3 {
+    margin: 20px 0;
+    margin-left: -7px;
+}
+
+/* -----------------------------bar css ------------------------------------------------ */
+
+.skill {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.skills {
+    width: 100%;
+}
+
+.about .container .skill p {
+    font-size: 1.2em;
+    font-weight: 545;
+    margin: 0 0 0 10px;
+}
+
+.progress-bar {
+    border-radius: 20px;
+    background-color: var(--border-secondary-color);
+    height: 3px;
+    width: 100%;
+    margin: 12px 15px;
+    position: relative;
+}
+
+
+.progress {
+    background-color: var(--btn-secondary-color);
+    height: 100%;
+    padding-right: 10px;
+    width: 0;
+}
+
+.progress.open {
+    animation: fillBar 2s ease-in-out forwards;
+}
+
+
+@keyframes fillBar {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--target-width);
+    }
+}
+
+
+/* ----------------------------portfolio----------------------------------------------------------------------- */
+
+.portfolioset {
+    margin: 10px;
+    position: relative;
+    width: 365px;
+    height: auto;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease;
+}
+
+.portfolioset.hidden {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+    transition: all 0.7s ease;
+}
+
+.portimg {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.portimg img {
+    border-radius: 7px;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.porttext {
+    position: absolute;
+    overflow: hidden;
+    border-radius: 7px;
+    top: 0;
+    left: 0;
+    color: var(--back-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.porttext p {
+    font-size: 2em;
+    font-weight: 100;
+    margin: 0;
+}
+
+.portlink {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.portlink i {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+    margin: 0 5px;
+    color: inherit;
+}
+
+.portlink i:hover,
+.portlink a i:hover {
+    color: var(--btn-color);
+}
+
+.portfolioset:hover .porttext {
+    opacity: 1;
+}
+
+.projectslink {
+    margin: 35px 0 0 910px !important;
+    font-size: 1.4em !important;
+}
+
+/* -------------------------------------------------contact-------------------------------------------- */
+
+.contact,
+.portfolio,
+.about {
+    margin-bottom: 120px;
+}
+
+.contact .slide-in-left h4 {
+    text-align: left;
+    margin: 20px 46px;
+    color: var(--btn-secondary-color);
+    opacity: 0.7;
+}
+
+.contact .slide-in-left .border-b {
+    width: 62px;
+    margin: -14px 0 20px 46px;
+    border-color: var(--border-secondary-color);
+    border-width: 3px;
+}
+
+.contact-info .info-item h6 {
+    font-weight: 100;
+    cursor: auto;
+}
+
+.form-group .form-control {
+    margin: 6px 0;
+    font-size: 17px;
+    background-color: #d6d4d4;
+}
+
+.form-group .form-control:hover {
+    background-color: #e5dfdf;
+}
+
+/* --------------------------------------------footer----------------------------------------- */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    background: #d6d4d4;
+    /* position: absolute;
+    border-top: 1px solid #111;
+    padding: 0 220px;
+    margin: -75px 0;
+    gap: 255px; */
+}
+
+footer p {
+    margin: 20px 0;
+    font-size: 1.3rem;
+    color: var(--border-secondary-color);
+}
+
+.social {
+    margin: 20px 0;
+}
+
+.social li {
+    margin: 0 5px;
+    color: var(--btn-secondary-color);
+}
+
+.social li a i {
+    color: inherit;
+    width: 24px;
+}
+
+.model-close {
+    color: aqua;
+    position: absolute;
+    margin-left: 210px;
+    margin-top: -33px;
+}
+
+
+@media (max-width: 768px) {
+
+    .header,
+    nav {
+        background: #d6d4d4 !important;
+    }
+
+    nav {
+        right: -770px;
+        top: 68px;
+        /* left: 0; */
+        width: 60%;
+    }
+
+    nav.show {
+        right: 0;
+        left: 150px;
+    }
+
+    .logo h1 {
+        color: var(--text-color);
+    }
+
+    .menu {
+        filter: invert(0);
+    }
+
+    .menu .i-menu{
+        color: var(--text-color);
+        border: 1px solid;
+    }
+
+    .custom-cursor {
+        display: none;
+    }
+
+    .hero {
+        background-position: left;
+    }
+
+    .hero-right {
+        padding: 120px 0;
+        text-align: left;
+    }
+
+    .hero-right h1,
+    .hero-right p {
+        text-align: left;
+    }
+
+    .contact .slide-in-left h4,
+    .contact .slide-in-left .border-b {
+        margin-left: 0;
+    }
+
+    .contact-info .info-item {
+        padding-left: 0;
+    }
+
+    footer {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    footer p {
+        margin-top: -12px;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .model-close {
+        margin-left: 130px;
+    }
+
+    .modal-content {
+        margin: 5% 7%;
+    }
+}
