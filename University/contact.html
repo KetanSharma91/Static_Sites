@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>University Website Design</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="icon" href="assets/images/logof.jpg" type="image/x-icon">
+    </head>
+
+    <body>
+        <section class="sub-header">
+            <nav>
+                <a href="index.html"><img src="assets/images/logo.png"></a>
+                <div class="nav-links" id="navlinks">
+                    <i class="cross-btn" onclick="hideMenu()"><img
+                            src="assets/images/menu/cross.png"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="course.html">COURSE</a></li>
+                        <li><a href="blog.html">BLOG</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="menu-btn" onclick="showMenu()"><img
+                        src="assets/images/menu/menu.png"></i>
+            </nav>
+            <h1>Contact Us</h1>
+        </section>
+
+        <!------------------contact us------------>
+
+        <section class="location">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31101.129179646818!2d77.53147870271114!3d12.99478898863379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3df30cb8f5c5%3A0x4fd69ee1b53c32a!2sRajajinagar%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1689234862059!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <section class="contact-us">
+            <div class="row">
+                <div class="contact-col">
+                    <div>
+                        <i class="home"><img src="assets/images/other/house.png"></i>
+                        <span>
+                            <h5>XYZ Road, ABC Building</h5>
+                            <p>Bangalore, Karnataka, India</p>
+                        </span>
+                    </div>
+                    <div>
+                        <i class="phone"><img src="assets/images/other/phone.png"></i>
+                        <span>
+                            <h5>+91 0123456789</h5>
+                            <p>Monday to Saturday, 10AM to 6PM</p>
+                        </span>
+                    </div>
+                    <div>
+                        <i class="envelope"><img src="assets/images/other/envelope.png"></i>
+                        <span>
+                            <h5>info@easywebsites.com</h5>
+                            <p>Email us your query</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="contact-col">
+
+                    <form action="assets/form/form-handler.php" method="post">
+                        <input type="text" name="name" placeholder="Enter your name"
+                            required>
+                        <input type="email" name="email" placeholder="Enter email address"
+                            required>
+                        <input type="text" name="subject" placeholder="Enter your subject"
+                            required>
+                        <textarea rows="8" name="message" placeholder="Message" required></textarea>
+                        <button type="submit" class="hero-btn red-btn">Send
+                            Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!------------------Footer---------------->
+        <footer>
+            <h4>About Us</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                debitis obcaecati odit corrupti beatae dignissimos labore
+                numquam <br> sed delectus blanditiis nemo, sint unde eaque,
+                quidem
+                eum accusantium quod modi architecto.</p>
+            <div class="icons">
+                <i><img src="assets/images/logo/Facebook.png"></i>
+                <i><img src="assets/images/logo/instlogo.png"></i>
+                <i><img src="assets/images/logo/twitter.png"></i>
+                <i><img src="assets/images/logo/linkedlogo.png"></i>
+            </div>
+            <p>Made by Easy Websites.</p>
+        </footer>
+
+        <script src="assets/js/script.js"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/KetanSharma91/TextUtils/static/css/main.229cc958.css",
+    "main.js": "/KetanSharma91/TextUtils/static/js/main.f6c0d0c8.js",
+    "static/js/453.51f100fd.chunk.js": "/KetanSharma91/TextUtils/static/js/453.51f100fd.chunk.js",
+    "index.html": "/KetanSharma91/TextUtils/index.html",
+    "main.229cc958.css.map": "/KetanSharma91/TextUtils/static/css/main.229cc958.css.map",
+    "main.f6c0d0c8.js.map": "/KetanSharma91/TextUtils/static/js/main.f6c0d0c8.js.map",
+    "453.51f100fd.chunk.js.map": "/KetanSharma91/TextUtils/static/js/453.51f100fd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.229cc958.css",
+    "static/js/main.f6c0d0c8.js"
+  ]
+}

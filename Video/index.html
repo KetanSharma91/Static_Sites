@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Video</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="brand">Travel</a>
+        <div class="menu-btn"></div>
+        <div class="navbar">
+            <div class="nav-items">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Explore</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="home">
+        <video class="video-slide" src="assets/videos/Ocean.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="assets/videos/Nature.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="assets/videos/Desert.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="assets/videos/jungle.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="assets/videos/man.mp4" autoplay muted loop></video>
+
+        <div class="content active">
+            <h1>Wonderful.<br><span>Island</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Vitaedolores architecto aspernatur omnis dolore praesentium,
+                mollitianon, suscipit perspiciatis alias ullam unde maxime quibusdam
+                ab,exercitationem odit numquam blanditiis hic? Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Rerum debitis
+                enim, ea quis tempore ab deserunt consequuntur!
+            </p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="content">
+            <h1>Camping.<br><span>Enjoy</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Vitaedolores architecto aspernatur omnis dolore praesentium,
+                mollitianon, suscipit perspiciatis alias ullam unde maxime quibusdam
+                ab,exercitationem odit numquam blanditiis hic? Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Rerum debitis
+                enim, ea quis tempore ab deserunt consequuntur!
+            </p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="content">
+            <h1>Adventures.<br><span>Off Road</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Vitaedolores architecto aspernatur omnis dolore praesentium,
+                mollitianon, suscipit perspiciatis alias ullam unde maxime quibusdam
+                ab,exercitationem odit numquam blanditiis hic? Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Rerum debitis
+                enim, ea quis tempore ab deserunt consequuntur!
+            </p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="content">
+            <h1>Road Trip.<br><span>Together</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Vitaedolores architecto aspernatur omnis dolore praesentium,
+                mollitianon, suscipit perspiciatis alias ullam unde maxime quibusdam
+                ab,exercitationem odit numquam blanditiis hic? Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Rerum debitis
+                enim, ea quis tempore ab deserunt consequuntur!
+            </p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="content">
+            <h1>Feel Nature.<br><span>Relex</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Vitaedolores architecto aspernatur omnis dolore praesentium,
+                mollitianon, suscipit perspiciatis alias ullam unde maxime quibusdam
+                ab,exercitationem odit numquam blanditiis hic? Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Rerum debitis
+                enim, ea quis tempore ab deserunt consequuntur!
+            </p>
+            <a href="#">Read More</a>
+        </div>
+
+
+        <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i><img src="assets/images/logo/Facebook.png" style="filter: invert(100%);"></a>
+            <a href="#"><i class="fab fa-instagram"></i><img src="assets/images/logo/instlogo.png" style="filter: invert(100%);"> </a>
+            <a href="#"><i class="fab fa-twitter"></i><img src="assets/images/logo/twitlogo.png" style="filter: invert(100%);"></a>
+        </div>
+        <div class="slide-navbar">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+
+    <script>
+        // javascript of resposive nav menu 
+        const menubtn = document.querySelector(".menu-btn");
+        const navbar = document.querySelector(".navbar");
+
+        menubtn.addEventListener("click", () => {
+            menubtn.classList.toggle("active");
+            navbar.classList.toggle("active");
+        });
+
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+        const contents = document.querySelectorAll(".content");
+
+        var slidernav = function (manual) {
+            btns.forEach((btn) => {
+                btn.classList.remove("active");
+            })
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+            })
+            contents.forEach((content1) => {
+                content1.classList.remove("active");
+            })
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+            contents[manual].classList.add("active");
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                slidernav(i);
+            })
+        })
+    </script>
+</body>
+
+</html>
