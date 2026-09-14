@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/logo.png"  type="image/icon type">
+    <title>KETAN SHARMA</title>
+    <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Nav Bar-->
+    <header class="header">
+        <i class="menu"><img src="assets/images/menu.png" alt="Menu"></i>
+        <a href="#" class="logo"><img src="assets/images/logo1.png" alt="logo"></a>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Page  -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Hello, I am <z>KETAN SHARMA</z></h1>
+            <p> And I'm a <z><span class="typed" data-typed-items="Student, Developer, Freelancer, Content Creater"></span></z>
+            </p>
+            <a href="#contact" class="btn">Contact Me!</a>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="section">
+        <div class="heading">
+            <h1>About Me</h1>
+        </div>
+        <div class="about-cont">
+            <div class="about-container indro">
+                <h2>Introduction</h2>
+                <p class="about-content">I'm <strong>Ketan Sharma</strong>, a second-year BCA student specializing in
+                    Data
+                    Science at Acharya Institute of Technology, Bangalore. I have a keen interest in leveraging data to
+                    solve real-world problems and an passionate about web development and app development.</p>
+            </div>
+            <div class="about-container">
+                <h2>Education and Skills</h2>
+                <h3>Education</h3>
+                <p class="about-content">BCA in Data Science, <br>Acharya Institute of Technology, Bangalore</p>
+                <h3>Skills</h3>
+                <ul class="about-content">
+                    <li>Programming Languages: Python, JavaScript</li>
+                    <li>Web Development: HTML/CSS, React</li>
+                    <li>Data Analysis: SQL </li>
+                    <li>Soft Skills: Teamwork, Problem-solving, Communication</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section">
+        <div class="heading">
+            <h1>Services</h1>
+        </div>
+        <div class="service-container">
+            <div class="service">
+                <img src="assets/images/web.jpg" alt="Web Development">
+                <h2>Web Development</h2>
+                <p>Professional web development services to create stunning and functional websites tailored to your
+                    needs. Whether it's a personal blog or a corporate website, I provide end-to-end solutions.</p>
+            </div>
+
+            <div class="service">
+                <img src="assets/images/appdev.jpg" alt="App Development">
+                <h2>App Development</h2>
+                <p>Expertise in developing mobile applications for Android and iOS platforms. I ensure smooth and
+                    user-friendly experiences for all users with cutting-edge technology and design.</p>
+            </div>
+
+            <div class="service">
+                <img src="assets/images/datbase.jpg" alt="Database">
+                <h2>Database Administrator</h2>
+                <p>Providing data analysis and visualization services to help you make informed decisions. From data
+                    cleaning to complex modeling, I offer comprehensive database solutions.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Projects -->
+    <section id="projects" class="pro">
+        <div class="heading">
+            <h1>Projects</h1>
+        </div>
+        <h2>Website Projects</h2>
+        <div class="project-container">
+            <div class="project">
+                <img src="assets/images/website1.jpg" alt="Website Project 1">
+                <div class="project-info">
+                    <h3>Portfolio Website</h3>
+                    <p>This is my personal portfolio website designed to showcase my skills, projects, and professional
+                        background. The site features a clean, modern design with sections for an about me, services,
+                        projects, and contact. It is fully responsive and built with HTML, CSS, and JavaScript.</p>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="assets/images/website2.jpg" alt="Website Project 2">
+                <div class="project-info">
+                    <h3>E-commerce Website</h3>
+                    <p>This e-commerce website was developed for a small business to sell products online. It includes
+                        features such as a product catalog, shopping cart, and secure checkout process. The site is
+                        built using HTML, CSS, JavaScript, and integrates with a backend server using PHP and MySQL.</p>
+                </div>
+            </div>
+        </div>
+        <h2>App Development Project</h2>
+        <div class="project-container">
+            <div class="project">
+                <img src="assets/images/app.jpg" alt="App Development Project">
+                <div class="project-info">
+                    <h3>Task Management App</h3>
+                    <p>This mobile app was developed to help users manage their daily tasks efficiently. It features
+                        task creation, editing, and deletion, as well as categorization and reminders. The app is built
+                        for both Android and iOS platforms using Flutter, ensuring a seamless user experience across
+                        devices.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact US -->
+    <section id="contact" class="con">
+        <div class="heading">
+            <h1>Contact Me!</h1>
+        </div>
+        <div class="card-body">
+            <form action="assets/php/sendmail.php" method="POST">
+                <div class="mb-3">
+                    <label for="fullname"></label>
+                    <input type="text" name="full_name" id="fullname" placeholder="Name" required class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label for="email_address"></label>
+                    <input type="email" name="email" id="email_address" placeholder="Email" required class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label for="message"></label>
+                    <textarea name="message" id="message" required class="form-control" placeholder="Message" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" name="submitContact" class="btn btn-primary">Send Message</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+        <div class="social-links">
+            <a href="https://github.com/KetanSharma91" target="_blank"><i><img src="assets/images/icons/github.png"
+                        alt="github"></i></a>
+            <a href="https://www.instagram.com/ketansharma911/" target="_blank"><i><img
+                        src="assets/images/icons/instlogo.png" alt="instgram"></i></a>
+            <a href="https://x.com/KetanSharm37993" target="_blank"><i><img src="assets/images/icons/twitter.png"
+                        alt="X.com"></i></a>
+            <a href="http://linkedin.com/in/ketan-sharma-b1b0a5288/" target="_blank"><i><img
+                        src="assets/images/icons/linkedin.png" alt="linkedin.com"></i></a>
+        </div>
+        </div>
+
+        <!-- footer  -->
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 KetShar. All rights reserved.</p>
+            </div>
+        </footer>
+    </section>
+
+
+    <script src="assets/js/Contact JS/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/Contact JS/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/Contact JS/sweetalert2@11.js"></script>
+
+    <script src="assets/js/typed.umd.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
